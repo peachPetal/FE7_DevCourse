@@ -96,14 +96,26 @@
 // 함수 오버로딩을 사용하여 이 기능을 구현하고, 각 타입의 인자를 넘겨 호출해보세요.
 
 // ```tsx
-// // 함수 정의
-// function getInfo(param) {
-//   return `Name: ${param}`;
-// }
 
-// // 함수 호출
-// const info1 = getInfo("Alice");
-// const info2 = getInfo(30);
-// console.log(info1);
-// console.log(info2);
+{
+    // 함수 오버로딩
+    function getInfo(param: string): string;
+    function getInfo(param: number): string;
+
+    // 실제 구현부
+    function getInfo(param: string | number): string {
+        if (typeof param === "string") {
+            return `Name: ${param}`;
+        } else {
+            return `Age: ${param}`;
+        }
+    }
+
+    // 함수 호출
+    const info1 = getInfo("Alice");
+    const info2 = getInfo(30);
+
+    console.log(info1);
+    console.log(info2);
+}
 // ```
