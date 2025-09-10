@@ -18,16 +18,18 @@ import { NumberLiteralType } from "typescript";
     interface Car{
         brand: string;
         model: string;
-        start(): void;
+        start(this: Car, speed: number): void;
     }
 
     const car: Car = {
         brand: "Hyundai",
         model: "Avante",
-        start() {
-            console.log(`${this.brand} ${this.model} Engine Start!`);
+        start(this: Car, speed: number) {
+            console.log(`${this.brand} ${this.model} Engine Start! / Speed: ${speed}KM`);
         },
     }
+
+    car.start(100);
 }
 
 // 3. 선택적 속성 사용
@@ -41,6 +43,7 @@ import { NumberLiteralType } from "typescript";
     const employee: Employee = {
         name: "kim",
         position: "Sales",
+        department: "IT",
     }
 }
 
@@ -89,7 +92,7 @@ import { NumberLiteralType } from "typescript";
 // 7. 다형성을 가진 인터페이스
 {
     interface Shape{
-        area(): number;
+        area(): void;
     }
 
     interface Circle extends Shape{
@@ -99,6 +102,21 @@ import { NumberLiteralType } from "typescript";
     interface Rectangle extends Shape{
         width: number;
         height: number;
+    }
+
+    const circle: Circle = {
+        radius: 10,
+        area(this: Circle){
+            return Math.PI * Math.pow(this.radius, 2);
+        },
+    }
+
+    const rectangle: Rectangle = {
+        width: 5,
+        height: 10,
+        area(this: Rectangle) {
+            return this.width * this.height;
+        },
     }
 }
 
@@ -112,15 +130,17 @@ import { NumberLiteralType } from "typescript";
     interface Address{
         street: string;
         city: string;
-        zipcode: number;
+        zipcode: string;
     }
 
-    const Contact: Person & Address = {
+    interface Contact extends Person, Address {};
+
+    const contact: Contact = {
         name: "kim",
         age: 20,
         street: "Gangnam Dae-ro",
         city: "Seoul",
-        zipcode: 11111,
+        zipcode: "1111",
     }
 }
 
@@ -128,6 +148,10 @@ import { NumberLiteralType } from "typescript";
 {
     interface Dictionary{
         [key: string]: string;
+    }
+    const dictionary: Dictionary = {
+        hello: "a",
+        myName: "kisu",
     }
 }
 
