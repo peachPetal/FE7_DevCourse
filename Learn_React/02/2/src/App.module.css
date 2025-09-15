@@ -1,0 +1,13 @@
+/* h1{
+    font-style: italic;
+} */
+.red_c{
+    color: red;
+    text-decoration: underline;
+}
+
+.line_through{
+    text-decoration: line-through;
+}
+
+/* BEM 규칙(Block-Element-Modify) 규칙 */
