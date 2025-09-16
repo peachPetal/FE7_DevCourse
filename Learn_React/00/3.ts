@@ -46,3 +46,30 @@
 
 // Tailwind CSS
 // CSS-IN-JS
+
+// 리액트 스타일링
+// 외부(글로벌) 스타일
+// CSS Module(*.module.css) 
+// Classnames
+// Tailwind CSS - Utility First 방식으로 설계된 프레임워크
+// Bootstrap처럼 이미 만들어진 컴포넌트를 제공하는 대신
+// Tailwind는 아주 작은 유틸리티 클래스 제공
+// 유틸리티 퍼스트는 작고 단일한 역할만 하는 CSS를 조합해서 UI를 만드는 방식
+
+// .btn-primary{background-color: blue; color: white; padding: 10px;},
+// <button class="btn-primary"></button>
+// <button class="bg-blue-500 text-white p-2.5"></button>
+
+// twMerge{'px-2 py-1 bg-red hover:bg-dark-red', 'p-3 bg-[#B91C1C]'}
+// 'px-2 py-1 bg-red hover:bg-dark-red', 'p-3 bg-[#B91C1C]'
+// → 'hover:bg-dark-red p-3 bg-[#B91C1C]'
+
+// CSS-IN-JS
+// CSS를 자바스크립트 코드 안에서 작성하고 시뮬하는 방식
+// 유명한 CSS-IN-JS
+// styled-components 개발 공식 종료 -> 유지보수만 함
+// emotion
+// vanilla extract - zero run time(빌드할 때만 css를 생성)
+
+// 컴포넌트 데이터 전달
+// properties, props
