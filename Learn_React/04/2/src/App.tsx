@@ -1,22 +1,30 @@
 import Button from "./components/Button";
-import Input from "./components/input";
+import Input from "./components/Input";
 import InputWithButton from "./components/InputWithButton";
 import CheckBox from "./components/CheckBox";
 
 export default function App() {
   return (
-    <div className="flex flex-col justify-center items-center h-screen gap-[40px] bg-gray-100">
-      <div className="w-[189px] h-[234px] bg-black flex flex-col justify-center items-center gap-[22px]">
-        <Button />
-        <Button label="Delete" bgColor="#ED4848"/>
-        <Button label="Success" bgColor="#7D48ED"/>
-      </div>
+    // <div className="flex flex-col justify-center items-center h-screen gap-[40px] bg-gray-100">
+    //   <div className="w-[189px] h-[234px] bg-black flex flex-col justify-center items-center gap-[22px]">
+    //     <Button />
+    //     <Button label="Delete" bgColor="#ED4848"/>
+    //     <Button label="Success" bgColor="#7D48ED"/>
+    //   </div>
 
-      <Input />
+    //   <Input />
 
-      <InputWithButton />
+    //   <InputWithButton />
 
-      <CheckBox />
+    //   <CheckBox />
+    // </div>
+    <div className="center">
+        <Input type="text" placeholder="Enter Todo List"/>
+        <CheckBox type="checkbox">
+          <span>
+             I agree with <strong>terms</strong> and <strong>policies</strong>.
+          </span>
+        </CheckBox>
     </div>
   );
 }
