@@ -38,16 +38,17 @@ import Button from "./html/Button";
 import Input from "./html/Input";
 import { useAppDispatch } from "../store/hooks";
 import { addTodo } from "../store/slices/todoSlice";
+import { AppDispatch } from "../store/store";
 
 export default function TodoEditor() {
-  const dispatch = useAppDispatch();
+  const dispatch = useAppDispatch<AppDispatch>();
   const [text, setText] = useState("");
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (text.trim() === "") return;
     // dispatch를 통해 addTodo 액션을 스토어로 전달
-    dispatch(addTodo(text));
+    dispatch(addTodo({text}));
     setText("");
   };
 
