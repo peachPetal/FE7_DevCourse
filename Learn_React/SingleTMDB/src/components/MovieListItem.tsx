@@ -1,4 +1,5 @@
 import { star } from "../assets/movies/assets";
+import { format } from 'date-fns';
 
 interface Movie {
   poster_path: string;
@@ -13,10 +14,9 @@ interface MovieListItemProps {
 
 export default function MovieListItem({ movie }: MovieListItemProps) {
   const imageUrl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
-  const releaseYear = movie.release_date
-    ? new Date(movie.release_date).getFullYear()
+  const releaseInfo = movie.release_date
+    ? format(new Date(movie.release_date), 'yyyy.MM.dd')
     : "N/A";
-
   return (
     <div>
       <img
@@ -40,7 +40,7 @@ export default function MovieListItem({ movie }: MovieListItemProps) {
             {movie.vote_average.toFixed(1)}
           </span>
         </div>
-        <span className="font-bold">{releaseYear}</span>
+        <span className="text-yellow-500 font-bold">{releaseInfo}</span>
       </div>
     </div>
   );
