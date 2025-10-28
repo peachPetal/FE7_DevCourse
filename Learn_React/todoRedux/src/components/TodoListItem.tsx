@@ -79,11 +79,12 @@ import {
   toggleTodo,
   updateTodo,
 } from "../store/slices/todoSlice";
+import { AppDispatch } from "../store/store";
 
 export default React.memo(function TodoListItem({ todo }: { todo: Todo }) {
   // console.log("TodoListItem Rendering"); // 렌더링 확인은 그대로 유지
 
-  const dispatch = useAppDispatch();
+  const dispatch = useAppDispatch<AppDispatch>();
 
   const [isEdit, setIsEdit] = useState(false);
   const [text, setText] = useState(todo.text);
@@ -94,14 +95,14 @@ export default React.memo(function TodoListItem({ todo }: { todo: Todo }) {
       dispatch(updateTodo({ id: todo.id, text }));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isEdit]); // useEffect 의존성 배열을 간소화할 수 있습니다.
+  }, [dispatch, isEdit, text, todo.id, todo.text]); // useEffect 의존성 배열을 간소화할 수 있습니다.
 
   const handleToggle = () => {
-    dispatch(toggleTodo(todo.id));
+    dispatch(toggleTodo({id: todo.id}));
   };
 
   const handleDelete = () => {
-    dispatch(deleteTodo(todo.id));
+    dispatch(deleteTodo({id: todo.id}));
   };
 
   const handleUpdate = () => {
