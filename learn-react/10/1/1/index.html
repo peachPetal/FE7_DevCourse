@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>음료 메뉴 검색 및 장바구니 담기</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="navbar__title">
+          <h1>음료 메뉴 검색 및 장바구니 담기</h1>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="top-navbar">
+        <nav class="navbar-menu-category">
+          <a class="menu-category active" id="all">전체</a>
+          <a class="menu-category" id="espresso">에스프레소</a>
+          <a class="menu-category" id="blend">블랜드</a>
+          <a class="menu-category" id="frappuccino">프라푸치노</a>
+        </nav>
+      </div>
+      <div class="content">
+        <div class="menu-list">
+          <div class="menu-card" id="E1">
+            <div class="menu-contents">
+              <div class="menu-info">
+                <div class="category">에스프레소</div>
+                <div class="name">플랫 화이트</div>
+                <div class="recipes">에스프레소 2샷 | 스팀 밀크</div>
+              </div>
+              <div class="menu-options">
+                <div class="personal-cup">
+                  <input
+                    type="checkbox"
+                    id="personalCupForE1"
+                    class="personal-cup-checkbox"
+                  />
+                  <label for="personalCupForE1">개인컵 사용하기</label>
+                </div>
+                <div class="cup-selection">
+                  <div class="cup-option">
+                    <input
+                      type="radio"
+                      id="tallForE1"
+                      name="cupSizeForE1"
+                      value="Tall"
+                      checked=""
+                    />
+                    <label for="tallForE1">
+                      <div class="option-name">Tall</div>
+                      <div class="option-size">355ml</div>
+                    </label>
+                  </div>
+                  <div class="cup-option">
+                    <input
+                      type="radio"
+                      id="grandeForE1"
+                      name="cupSizeForE1"
+                      value="Grande"
+                    />
+                    <label for="grandeForE1">
+                      <div class="option-name">Grande</div>
+                      <div class="option-size">473ml</div>
+                    </label>
+                  </div>
+                  <div class="cup-option">
+                    <input
+                      type="radio"
+                      id="ventiForE1"
+                      name="cupSizeForE1"
+                      value="Venti"
+                    />
+                    <label for="ventiForE1">
+                      <div class="option-name">Venti</div>
+                      <div class="option-size">591ml</div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="menu-btns">
+                <button class="btn-save">담기</button>
+              </div>
+            </div>
+          </div>
+          <div class="menu-card" id="E2">
+            <div class="menu-contents">
+              <div class="menu-info">
+                <div class="category">에스프레소</div>
+                <div class="name">카라멜 마키아또</div>
+                <div class="recipes">
+                  에스프레소 1샷 | 스팀 밀크 | 바닐라 시럽 | 카라멜 소스
+                </div>
+              </div>
+              <div class="menu-options">
+                <div class="personal-cup">
+                  <input
+                    type="checkbox"
+                    id="personalCupForE2"
+                    class="personal-cup-checkbox"
+                  />
+                  <label for="personalCupForE2">개인컵 사용하기</label>
+                </div>
+                <div class="cup-selection">
+                  <div class="cup-option">
+                    <input
+                      type="radio"
+                      id="tallForE2"
+                      name="cupSizeForE2"
+                      value="Tall"
+                      checked=""
+                    />
+                    <label for="tallForE2">
+                      <div class="option-name">Tall</div>
+                      <div class="option-size">355ml</div>
+                    </label>
+                  </div>
+                  <div class="cup-option">
+                    <input
+                      type="radio"
+                      id="grandeForE2"
+                      name="cupSizeForE2"
+                      value="Grande"
+                    />
+                    <label for="grandeForE2">
+                      <div class="option-name">Grande</div>
+                      <div class="option-size">473ml</div>
+                    </label>
+                  </div>
+                  <div class="cup-option">
+                    <input
+                      type="radio"
+                      id="ventiForE2"
+                      name="cupSizeForE2"
+                      value="Venti"
+                    />
+                    <label for="ventiForE2">
+                      <div class="option-name">Venti</div>
+                      <div class="option-size">591ml</div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="menu-btns">
+                <button class="btn-save">담기</button>
+              </div>
+            </div>
+          </div>
+          <div class="menu-card" id="E3">
+            <div class="menu-contents">
+              <div class="menu-info">
+                <div class="category">에스프레소</div>
+                <div class="name">아이스 라떼</div>
+                <div class="recipes">에스프레소 1샷 | 얼음 | 스팀 밀크</div>
+              </div>
+              <div class="menu-options">
+                <div class="personal-cup">
+                  <input
+                    type="checkbox"
+                    id="personalCupForE3"
+                    class="personal-cup-checkbox"
+                  />
+                  <label for="personalCupForE3">개인컵 사용하기</label>
+                </div>
+                <div class="cup-selection">
+                  <div class="cup-option">
+                    <input
+                      type="radio"
+                      id="tallForE3"
+                      name="cupSizeForE3"
+                      value="Tall"
+                      checked=""
+                    />
+                    <label for="tallForE3">
+                      <div class="option-name">Tall</div>
+                      <div class="option-size">355ml</div>
+                    </label>
+                  </div>
+                  <div class="cup-option">
+                    <input
+                      type="radio"
+                      id="grandeForE3"
+                      name="cupSizeForE3"
+                      value="Grande"
+                    />
+                    <label for="grandeForE3">
+                      <div class="option-name">Grande</div>
+                      <div class="option-size">473ml</div>
+                    </label>
+                  </div>
+                  <div class="cup-option">
+                    <input
+                      type="radio"
+                      id="ventiForE3"
+                      name="cupSizeForE3"
+                      value="Venti"
+                    />
+                    <label for="ventiForE3">
+                      <div class="option-name">Venti</div>
+                      <div class="option-size">591ml</div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="menu-btns">
+                <button class="btn-save">담기</button>
+              </div>
+            </div>
+          </div>
+          <div class="menu-card" id="E4">
+            <div class="menu-contents">
+              <div class="menu-info">
+                <div class="category">에스프레소</div>
+                <div class="name">아이스 카라멜 마키아또</div>
+                <div class="recipes">
+                  에스프레소 1샷 | 얼음 | 스팀 밀크 | 바닐라 시럽 | 카라멜 소스
+                </div>
+              </div>
+              <div class="menu-options">
+                <div class="personal-cup">
+                  <input
+                    type="checkbox"
+                    id="personalCupForE4"
+                    class="personal-cup-checkbox"
+                  />
+                  <label for="personalCupForE4">개인컵 사용하기</label>
+                </div>
+                <div class="cup-selection">
+                  <div class="cup-option">
+                    <input
+                      type="radio"
+                      id="tallForE4"
+                      name="cupSizeForE4"
+                      value="Tall"
+                      checked=""
+                    />
+                    <label for="tallForE4">
+                      <div class="option-name">Tall</div>
+                      <div class="option-size">355ml</div>
+                    </label>
+                  </div>
+                  <div class="cup-option">
+                    <input
+                      type="radio"
+                      id="grandeForE4"
+                      name="cupSizeForE4"
+                      value="Grande"
+                    />
+                    <label for="grandeForE4">
+                      <div class="option-name">Grande</div>
+                      <div class="option-size">473ml</div>
+                    </label>
+                  </div>
+                  <div class="cup-option">
+                    <input
+                      type="radio"
+                      id="ventiForE4"
+                      name="cupSizeForE4"
+                      value="Venti"
+                    />
+                    <label for="ventiForE4">
+                      <div class="option-name">Venti</div>
+                      <div class="option-size">591ml</div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="menu-btns">
+                <button class="btn-save">담기</button>
+              </div>
+            </div>
+          </div>
+          <div class="menu-card" id="E5">
+            <div class="menu-contents">
+              <div class="menu-info">
+                <div class="category">에스프레소</div>
+                <div class="name">아이스 카푸치노</div>
+                <div class="recipes">
+                  에스프레소 1샷 | 얼음 | 스팀 밀크 | 우유 거품
+                </div>
+              </div>
+              <div class="menu-options">
+                <div class="personal-cup">
+                  <input
+                    type="checkbox"
+                    id="personalCupForE5"
+                    class="personal-cup-checkbox"
+                  />
+                  <label for="personalCupForE5">개인컵 사용하기</label>
+                </div>
+                <div class="cup-selection">
+                  <div class="cup-option">
+                    <input
+                      type="radio"
+                      id="tallForE5"
+                      name="cupSizeForE5"
+                      value="Tall"
+                      checked=""
+                    />
+                    <label for="tallForE5">
+                      <div class="option-name">Tall</div>
+                      <div class="option-size">355ml</div>
+                    </label>
+                  </div>
+                  <div class="cup-option">
+                    <input
+                      type="radio"
+                      id="grandeForE5"
+                      name="cupSizeForE5"
+                      value="Grande"
+                    />
+                    <label for="grandeForE5">
+                      <div class="option-name">Grande</div>
+                      <div class="option-size">473ml</div>
+                    </label>
+                  </div>
+                  <div class="cup-option">
+                    <input
+                      type="radio"
+                      id="ventiForE5"
+                      name="cupSizeForE5"
+                      value="Venti"
+                    />
+                    <label for="ventiForE5">
+                      <div class="option-name">Venti</div>
+                      <div class="option-size">591ml</div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="menu-btns">
+                <button class="btn-save">담기</button>
+              </div>
+            </div>
+          </div>
+          <div class="menu-card" id="E6">
+            <div class="menu-contents">
+              <div class="menu-info">
+                <div class="category">에스프레소</div>
+                <div class="name">아이스 아메리카노</div>
+                <div class="recipes">에스프레소 1샷 | 얼음 | 물</div>
+              </div>
+              <div class="menu-options">
+                <div class="personal-cup">
+                  <input
+                    type="checkbox"
+                    id="personalCupForE6"
+                    class="personal-cup-checkbox"
+                  />
+                  <label for="personalCupForE6">개인컵 사용하기</label>
+                </div>
+                <div class="cup-selection">
+                  <div class="cup-option">
+                    <input
+                      type="radio"
+                      id="tallForE6"
+                      name="cupSizeForE6"
+                      value="Tall"
+                      checked=""
+                    />
+                    <label for="tallForE6">
+                      <div class="option-name">Tall</div>
+                      <div class="option-size">355ml</div>
+                    </label>
+                  </div>
+                  <div class="cup-option">
+                    <input
+                      type="radio"
+                      id="grandeForE6"
+                      name="cupSizeForE6"
+                      value="Grande"
+                    />
+                    <label for="grandeForE6">
+                      <div class="option-name">Grande</div>
+                      <div class="option-size">473ml</div>
+                    </label>
+                  </div>
+                  <div class="cup-option">
+                    <input
+                      type="radio"
+                      id="ventiForE6"
+                      name="cupSizeForE6"
+                      value="Venti"
+                    />
+                    <label for="ventiForE6">
+                      <div class="option-name">Venti</div>
+                      <div class="option-size">591ml</div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="menu-btns">
+                <button class="btn-save">담기</button>
+              </div>
+            </div>
+          </div>
+          <div class="menu-card" id="B1">
+            <div class="menu-contents">
+              <div class="menu-info">
+                <div class="category">블랜드</div>
+                <div class="name">블랙 커피</div>
+                <div class="recipes">커피 원두 | 물</div>
+              </div>
+              <div class="menu-options">
+                <div class="personal-cup">
+                  <input
+                    type="checkbox"
+                    id="personalCupForB1"
+                    class="personal-cup-checkbox"
+                  />
+                  <label for="personalCupForB1">개인컵 사용하기</label>
+                </div>
+                <div class="cup-selection">
+                  <div class="cup-option">
+                    <input
+                      type="radio"
+                      id="tallForB1"
+                      name="cupSizeForB1"
+                      value="Tall"
+                      checked=""
+                    />
+                    <label for="tallForB1">
+                      <div class="option-name">Tall</div>
+                      <div class="option-size">355ml</div>
+                    </label>
+                  </div>
+                  <div class="cup-option">
+                    <input
+                      type="radio"
+                      id="grandeForB1"
+                      name="cupSizeForB1"
+                      value="Grande"
+                    />
+                    <label for="grandeForB1">
+                      <div class="option-name">Grande</div>
+                      <div class="option-size">473ml</div>
+                    </label>
+                  </div>
+                  <div class="cup-option">
+                    <input
+                      type="radio"
+                      id="ventiForB1"
+                      name="cupSizeForB1"
+                      value="Venti"
+                    />
+                    <label for="ventiForB1">
+                      <div class="option-name">Venti</div>
+                      <div class="option-size">591ml</div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="menu-btns">
+                <button class="btn-save">담기</button>
+              </div>
+            </div>
+          </div>
+          <div class="menu-card" id="B2">
+            <div class="menu-contents">
+              <div class="menu-info">
+                <div class="category">블랜드</div>
+                <div class="name">피치 블렌디드</div>
+                <div class="recipes">피치 주스 | 얼음 | 시럽</div>
+              </div>
+              <div class="menu-options">
+                <div class="personal-cup">
+                  <input
+                    type="checkbox"
+                    id="personalCupForB2"
+                    class="personal-cup-checkbox"
+                  />
+                  <label for="personalCupForB2">개인컵 사용하기</label>
+                </div>
+                <div class="cup-selection">
+                  <div class="cup-option">
+                    <input
+                      type="radio"
+                      id="tallForB2"
+                      name="cupSizeForB2"
+                      value="Tall"
+                      checked=""
+                    />
+                    <label for="tallForB2">
+                      <div class="option-name">Tall</div>
+                      <div class="option-size">355ml</div>
+                    </label>
+                  </div>
+                  <div class="cup-option">
+                    <input
+                      type="radio"
+                      id="grandeForB2"
+                      name="cupSizeForB2"
+                      value="Grande"
+                    />
+                    <label for="grandeForB2">
+                      <div class="option-name">Grande</div>
+                      <div class="option-size">473ml</div>
+                    </label>
+                  </div>
+                  <div class="cup-option">
+                    <input
+                      type="radio"
+                      id="ventiForB2"
+                      name="cupSizeForB2"
+                      value="Venti"
+                    />
+                    <label for="ventiForB2">
+                      <div class="option-name">Venti</div>
+                      <div class="option-size">591ml</div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="menu-btns">
+                <button class="btn-save">담기</button>
+              </div>
+            </div>
+          </div>
+          <div class="menu-card" id="F1">
+            <div class="menu-contents">
+              <div class="menu-info">
+                <div class="category">프라푸치노</div>
+                <div class="name">자바 칩 프라푸치노</div>
+                <div class="recipes">
+                  커피 | 우유 | 자바 칩 | 초콜릿 시럽 | 얼음 | 휘핑크림
+                </div>
+              </div>
+              <div class="menu-options">
+                <div class="personal-cup">
+                  <input
+                    type="checkbox"
+                    id="personalCupForF1"
+                    class="personal-cup-checkbox"
+                  />
+                  <label for="personalCupForF1">개인컵 사용하기</label>
+                </div>
+                <div class="cup-selection">
+                  <div class="cup-option">
+                    <input
+                      type="radio"
+                      id="tallForF1"
+                      name="cupSizeForF1"
+                      value="Tall"
+                      checked=""
+                    />
+                    <label for="tallForF1">
+                      <div class="option-name">Tall</div>
+                      <div class="option-size">355ml</div>
+                    </label>
+                  </div>
+                  <div class="cup-option">
+                    <input
+                      type="radio"
+                      id="grandeForF1"
+                      name="cupSizeForF1"
+                      value="Grande"
+                    />
+                    <label for="grandeForF1">
+                      <div class="option-name">Grande</div>
+                      <div class="option-size">473ml</div>
+                    </label>
+                  </div>
+                  <div class="cup-option">
+                    <input
+                      type="radio"
+                      id="ventiForF1"
+                      name="cupSizeForF1"
+                      value="Venti"
+                    />
+                    <label for="ventiForF1">
+                      <div class="option-name">Venti</div>
+                      <div class="option-size">591ml</div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="menu-btns">
+                <button class="btn-save">담기</button>
+              </div>
+            </div>
+          </div>
+          <div class="menu-card" id="F2">
+            <div class="menu-contents">
+              <div class="menu-info">
+                <div class="category">프라푸치노</div>
+                <div class="name">그린티 크림 프라푸치노</div>
+                <div class="recipes">
+                  그린티 파우더 | 우유 | 얼음 | 휘핑크림
+                </div>
+              </div>
+              <div class="menu-options">
+                <div class="personal-cup">
+                  <input
+                    type="checkbox"
+                    id="personalCupForF2"
+                    class="personal-cup-checkbox"
+                  />
+                  <label for="personalCupForF2">개인컵 사용하기</label>
+                </div>
+                <div class="cup-selection">
+                  <div class="cup-option">
+                    <input
+                      type="radio"
+                      id="tallForF2"
+                      name="cupSizeForF2"
+                      value="Tall"
+                      checked=""
+                    />
+                    <label for="tallForF2">
+                      <div class="option-name">Tall</div>
+                      <div class="option-size">355ml</div>
+                    </label>
+                  </div>
+                  <div class="cup-option">
+                    <input
+                      type="radio"
+                      id="grandeForF2"
+                      name="cupSizeForF2"
+                      value="Grande"
+                    />
+                    <label for="grandeForF2">
+                      <div class="option-name">Grande</div>
+                      <div class="option-size">473ml</div>
+                    </label>
+                  </div>
+                  <div class="cup-option">
+                    <input
+                      type="radio"
+                      id="ventiForF2"
+                      name="cupSizeForF2"
+                      value="Venti"
+                    />
+                    <label for="ventiForF2">
+                      <div class="option-name">Venti</div>
+                      <div class="option-size">591ml</div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="menu-btns">
+                <button class="btn-save">담기</button>
+              </div>
+            </div>
+          </div>
+          <div class="menu-card" id="F3">
+            <div class="menu-contents">
+              <div class="menu-info">
+                <div class="category">프라푸치노</div>
+                <div class="name">모카 프라푸치노</div>
+                <div class="recipes">
+                  커피 | 우유 | 모카 시럽 | 얼음 | 휘핑크림
+                </div>
+              </div>
+              <div class="menu-options">
+                <div class="personal-cup">
+                  <input
+                    type="checkbox"
+                    id="personalCupForF3"
+                    class="personal-cup-checkbox"
+                  />
+                  <label for="personalCupForF3">개인컵 사용하기</label>
+                </div>
+                <div class="cup-selection">
+                  <div class="cup-option">
+                    <input
+                      type="radio"
+                      id="tallForF3"
+                      name="cupSizeForF3"
+                      value="Tall"
+                      checked=""
+                    />
+                    <label for="tallForF3">
+                      <div class="option-name">Tall</div>
+                      <div class="option-size">355ml</div>
+                    </label>
+                  </div>
+                  <div class="cup-option">
+                    <input
+                      type="radio"
+                      id="grandeForF3"
+                      name="cupSizeForF3"
+                      value="Grande"
+                    />
+                    <label for="grandeForF3">
+                      <div class="option-name">Grande</div>
+                      <div class="option-size">473ml</div>
+                    </label>
+                  </div>
+                  <div class="cup-option">
+                    <input
+                      type="radio"
+                      id="ventiForF3"
+                      name="cupSizeForF3"
+                      value="Venti"
+                    />
+                    <label for="ventiForF3">
+                      <div class="option-name">Venti</div>
+                      <div class="option-size">591ml</div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="menu-btns">
+                <button class="btn-save">담기</button>
+              </div>
+            </div>
+          </div>
+          <div class="menu-card custom-form">
+            <form id="customMenuForm">
+              <div class="form-groups">
+                <div class="form-group">
+                  <label for="menuCategory">음료 카테고리</label>
+                  <select id="menuCategory" name="menuCategory">
+                    <option value="에스프레소">에스프레소</option>
+                    <option value="블랜드">블랜드</option>
+                    <option value="프라푸치노">프라푸치노</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="menuName">음료 이름</label>
+                  <input type="text" id="menuName" name="menuName" required />
+                </div>
+                <div class="form-group">
+                  <label for="menuRecipes">음료 재료</label>
+                  <input id="menuRecipes" name="menuRecipes" required />
+                </div>
+              </div>
+              <div class="menu-btns">
+                <button type="submit" class="btn-submit">추가</button>
+              </div>
+            </form>
+          </div>
+          <button class="menu-card custom-menu" id="addCustomMenu">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              viewBox="0 0 25 25"
+              fill="none"
+            >
+              <rect x="10" width="5" height="25" fill="#92CDFF" />
+              <rect
+                x="25"
+                y="10"
+                width="5"
+                height="25"
+                transform="rotate(90 25 10)"
+                fill="#92CDFF"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="carts-container">
+          <h3>장바구니</h3>
+          <div class="carts-list">
+            <div class="cart-info">
+              <div class="current">
+                총
+                <div class="current-amount" id="currentAmount">0</div>
+                개 / 10개
+              </div>
+              <div>총 주문 가능 수량 10개</div>
+            </div>
+            <div class="cart-message">
+              <p>원하는 메뉴를 장바구니에 담아주세요.</p>
+            </div>
+            <div class="cart-item">
+              <button class="btn-delete">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                >
+                  <circle cx="9" cy="9" r="9" fill="#DCDCDC" />
+                  <path
+                    d="M4.05025 12.5355L12.5355 4.05025L13.9497 5.46446L5.46447 13.9497L4.05025 12.5355Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M5.46447 4.05025L13.9498 12.5355L12.5355 13.9497L4.05026 5.46446L5.46447 4.05025Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+              <div class="cart-item-contents">
+                <div class="name">아이스 플랫 화이트</div>
+                <div class="details">
+                  <div class="info">
+                    <div class="category">에스프레소</div>
+                    <div class="recipes">ICED | Tall</div>
+                  </div>
+                  <div class="amount">
+                    <div class="menu-amount">1</div>
+                    개
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cart-item">
+              <button class="btn-delete">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                >
+                  <circle cx="9" cy="9" r="9" fill="#DCDCDC" />
+                  <path
+                    d="M4.05025 12.5355L12.5355 4.05025L13.9497 5.46446L5.46447 13.9497L4.05025 12.5355Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M5.46447 4.05025L13.9498 12.5355L12.5355 13.9497L4.05026 5.46446L5.46447 4.05025Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+              <div class="cart-item-contents">
+                <div class="name">아이스 플랫 화이트</div>
+                <div class="details">
+                  <div class="info">
+                    <div class="category">에스프레소</div>
+                    <div class="recipes">ICED | Tall | 개인컵</div>
+                  </div>
+                  <div class="amount">
+                    <div class="menu-amount">1</div>
+                    개
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="dist/script.js"></script>
+  </body>
+</html>

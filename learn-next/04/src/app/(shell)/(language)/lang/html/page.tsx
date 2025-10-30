@@ -1,0 +1,7 @@
+export default function LangHtmlPage() {
+  return (
+    <>
+      <h1>HTML 문서</h1>
+    </>
+  );
+}
