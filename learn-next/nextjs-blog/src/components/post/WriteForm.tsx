@@ -1,11 +1,23 @@
 "use client";
 
+import { createClient } from "@/utils/supabase/client";
 import { X } from "lucide-react";
-import { useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
-export default function WritePage() {
-  const [tags, setTags] = useState<string[]>([]);
-  const [tagInput, setTagInput] = useState("");
+export default function WriteForm() {
+  // ?post_id=1
+  const searchParams = useSearchParams();
+  const postId = searchParams.get("post_id"); // 1
+
+  const router = useRouter();
+  const supabase = createClient();
+
+  const [title, setTitle] = useState(""); // 제목
+  const [content, setContent] = useState(""); // 내용
+  const [tags, setTags] = useState<string[]>([]); // 태그
+  const [tagInput, setTagInput] = useState(""); // 태그 입력창
+  const [submitting, setSubmitting] = useState(false);
 
   const addTag = () => {
     if (tagInput.trim() && !tags.includes(tagInput.trim())) {
@@ -17,6 +29,109 @@ export default function WritePage() {
   const removeTag = (tagToRemove: string) => {
     setTags(tags.filter((tag) => tag !== tagToRemove));
   };
+
+  const handlePublish = async () => {
+    if (title.trim() === "") {
+      alert("제목을 입력해주세요");
+      return;
+    }
+
+    if (content.trim() === "") {
+      alert("내용을 입력해주세요");
+      return;
+    }
+
+    // 태그 문자열
+    const tagString = tags.join(",");
+
+    try {
+      setSubmitting(true);
+      const {
+        data: { user },
+        error: userError,
+      } = await supabase.auth.getUser();
+
+      if (userError || !user) {
+        alert("로그인이 필요합니다.");
+        setSubmitting(false);
+        return;
+      }
+
+      const { data, error } = await supabase
+        .from("posts")
+        .insert([
+          {
+            profile_id: user.id,
+            title: title.trim(),
+            content: content.trim(),
+            tags: tagString,
+          },
+        ])
+        .select("id")
+        .single();
+
+      if (error) {
+        alert("게시글 등록 중 오류가 발생했습니다.");
+        setSubmitting(false);
+        return;
+      }
+
+      const newPostId = data.id;
+      if (newPostId) {
+        alert("게시글이 등록되었습니다.");
+        router.push(`/post/${newPostId}`);
+      } else {
+        router.push("/");
+      }
+    } catch (e) {
+      console.log(e);
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+  useEffect(() => {
+    if (!postId) return;
+    // 즉시 실행함수
+    (async () => {
+      const {
+        data: { user },
+        error: userError,
+      } = await supabase.auth.getUser();
+
+      if (!user || userError) {
+        alert("로그인 후 수정이 가능합니다.");
+        router.replace("/auth/login");
+        return;
+      }
+
+      const { data, error } = await supabase
+        .from("posts")
+        .select("*")
+        .eq("id", Number(postId))
+        .eq("profile_id", user?.id ?? "")
+        .single();
+
+      if (!data || error) {
+        alert("내 게시글만 수정 가능합니다.");
+        router.replace("/");
+        return;
+      }
+
+      setTitle(data.title ?? "");
+      setContent(data.content ?? "");
+      if (Array.isArray(data.tags)) {
+        setTags(data.tags);
+      } else if (typeof data.tags === "string") {
+        setTags(
+          data.tags
+            .split(",")
+            .map((t: string) => t.trim())
+            .filter(Boolean)
+        );
+      }
+    })();
+  }, [postId, router, supabase]);
 
   return (
     <div className="max-w-4xl mx-auto">
@@ -34,6 +149,8 @@ export default function WritePage() {
               type="text"
               placeholder="Title"
               className="w-full px-4 py-3 rounded-lg bg-gray-900/30 border border-gray-800 focus:border-gray-700 focus:outline-none font-light placeholder:text-gray-600"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
             />
           </div>
 
@@ -54,6 +171,8 @@ export default function WritePage() {
 - List item 2"
               rows={20}
               className="w-full px-4 py-3 rounded-lg bg-gray-900/30 border border-gray-800 focus:border-gray-700 focus:outline-none text-sm font-mono resize-none leading-relaxed"
+              value={content}
+              onChange={(e) => setContent(e.target.value)}
             />
           </div>
           <div className="space-y-2">
@@ -102,8 +221,12 @@ export default function WritePage() {
           </div>
 
           <div className="flex gap-3 pt-4">
-            <button className="px-6 py-2 rounded-lg bg-gray-700 hover:bg-gray-600 transition-colors text-sm">
-              Publish
+            <button
+              className="px-6 py-2 rounded-lg bg-gray-700 hover:bg-gray-600 transition-colors text-sm"
+              onClick={handlePublish}
+              disabled={submitting}
+            >
+              {submitting && (postId ? "Updating..." : "Publishing..." ) ? "Publish" : "Update"}
             </button>
             <button className="px-6 py-2 rounded-lg border border-gray-800 hover:border-gray-700 hover:bg-gray-900/50 transition-colors text-sm">
               Save Draft
