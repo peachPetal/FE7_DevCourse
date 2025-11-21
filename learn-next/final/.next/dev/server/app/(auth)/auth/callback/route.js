@@ -1,0 +1,11 @@
+var R=require("../../../../chunks/[turbopack]_runtime.js")("server/app/(auth)/auth/callback/route.js")
+R.c("server/chunks/beec6_@supabase_node-fetch_lib_index_92f39db5.js")
+R.c("server/chunks/beec6_next_5abce25f._.js")
+R.c("server/chunks/beec6_tr46_e0db4307._.js")
+R.c("server/chunks/beec6_@supabase_storage-js_dist_module_b9d404e8._.js")
+R.c("server/chunks/beec6_@supabase_auth-js_dist_module_60176e59._.js")
+R.c("server/chunks/beec6_0ccd9c16._.js")
+R.c("server/chunks/[root-of-the-server]__df4918e3._.js")
+R.c("server/chunks/45bbd_final__next-internal_server_app_(auth)_auth_callback_route_actions_17f4efaa.js")
+R.m("[project]/learn-next/final/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/learn-next/final/src/app/(auth)/auth/callback/route.ts [app-route] (ecmascript)\" } [app-route] (ecmascript)")
+module.exports=R.m("[project]/learn-next/final/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/learn-next/final/src/app/(auth)/auth/callback/route.ts [app-route] (ecmascript)\" } [app-route] (ecmascript)").exports

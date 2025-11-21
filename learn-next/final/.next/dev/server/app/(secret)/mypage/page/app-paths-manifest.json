@@ -1,0 +1,3 @@
+{
+  "/(secret)/mypage/page": "app/(secret)/mypage/page.js"
+}

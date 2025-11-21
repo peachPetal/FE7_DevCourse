@@ -1,0 +1,20 @@
+{
+  "node": {
+    "60ce505b1335b2b5785a524f25d7b5eba78c539ab1": {
+      "workers": {
+        "app/(secret)/additionalInfo/page": {
+          "moduleId": "[project]/learn-next/final/.next-internal/server/app/(secret)/additionalInfo/page/actions.js { ACTIONS_MODULE0 => \"[project]/learn-next/final/src/app/(secret)/additionalInfo/page.tsx [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "$$RSC_SERVER_ACTION_0",
+          "filename": "learn-next/final/src/app/(secret)/additionalInfo/page.tsx"
+        }
+      },
+      "layer": {
+        "app/(secret)/additionalInfo/page": "rsc"
+      },
+      "exportedName": "$$RSC_SERVER_ACTION_0",
+      "filename": "learn-next/final/src/app/(secret)/additionalInfo/page.tsx"
+    }
+  },
+  "edge": {}
+}

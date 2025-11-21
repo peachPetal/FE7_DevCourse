@@ -1,0 +1,3 @@
+{
+  "/(secret)/write/page": "app/(secret)/write/page.js"
+}

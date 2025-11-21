@@ -1,0 +1,20 @@
+{
+  "node": {
+    "0032271ae45205c707b18a6f9cab26b676378b9e12": {
+      "workers": {
+        "app/(public)/post/[id]/page": {
+          "moduleId": "[project]/learn-next/final/.next-internal/server/app/(public)/post/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/learn-next/final/src/utils/helper/server.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getGeminiProductFeed",
+          "filename": "learn-next/final/src/utils/helper/server.ts"
+        }
+      },
+      "layer": {
+        "app/(public)/post/[id]/page": "rsc"
+      },
+      "exportedName": "getGeminiProductFeed",
+      "filename": "learn-next/final/src/utils/helper/server.ts"
+    }
+  },
+  "edge": {}
+}

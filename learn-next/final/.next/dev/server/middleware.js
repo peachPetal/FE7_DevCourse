@@ -1,0 +1,10 @@
+var R=require("./chunks/[turbopack]_runtime.js")("server/middleware.js")
+R.c("server/chunks/beec6_@supabase_node-fetch_lib_index_20a931cb.js")
+R.c("server/chunks/beec6_next_0dcbef69._.js")
+R.c("server/chunks/beec6_tr46_686ca07a._.js")
+R.c("server/chunks/beec6_@supabase_storage-js_dist_module_18aa98de._.js")
+R.c("server/chunks/beec6_@supabase_auth-js_dist_module_44605bcf._.js")
+R.c("server/chunks/beec6_3bfffb32._.js")
+R.c("server/chunks/[root-of-the-server]__5f8dd959._.js")
+R.m("[project]/learn-next/final/node_modules/next/dist/esm/build/templates/middleware.js { INNER_MIDDLEWARE_MODULE => \"[project]/learn-next/final/src/proxy.ts [middleware] (ecmascript)\" } [middleware] (ecmascript)")
+module.exports=R.m("[project]/learn-next/final/node_modules/next/dist/esm/build/templates/middleware.js { INNER_MIDDLEWARE_MODULE => \"[project]/learn-next/final/src/proxy.ts [middleware] (ecmascript)\" } [middleware] (ecmascript)").exports

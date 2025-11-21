@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .artist-card {
+    @apply card bg-base-100 shadow-xl transition-all duration-300;
+  }
+  
+  .artist-card:hover {
+    @apply shadow-2xl -translate-y-1;
+  }
+}

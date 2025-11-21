@@ -1,0 +1,35 @@
+{
+  "node": {
+    "0036c5d34338af1467e8e46095dae5c6cb5b39aad4": {
+      "workers": {
+        "app/(secret)/mypage/page": {
+          "moduleId": "[project]/learn-next/final/.next-internal/server/app/(secret)/mypage/page/actions.js { ACTIONS_MODULE0 => \"[project]/learn-next/final/src/utils/actions/index.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "learn-next/final/src/utils/actions/index.ts"
+        }
+      },
+      "layer": {
+        "app/(secret)/mypage/page": "rsc"
+      },
+      "exportedName": "signOut",
+      "filename": "learn-next/final/src/utils/actions/index.ts"
+    },
+    "7fc2973d0bb97898cf385b59211f76d36b606bc0c6": {
+      "workers": {
+        "app/(secret)/mypage/page": {
+          "moduleId": "[project]/learn-next/final/.next-internal/server/app/(secret)/mypage/page/actions.js { ACTIONS_MODULE0 => \"[project]/learn-next/final/src/utils/actions/index.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "githubLogin",
+          "filename": "learn-next/final/src/utils/actions/index.ts"
+        }
+      },
+      "layer": {
+        "app/(secret)/mypage/page": "rsc"
+      },
+      "exportedName": "githubLogin",
+      "filename": "learn-next/final/src/utils/actions/index.ts"
+    }
+  },
+  "edge": {}
+}

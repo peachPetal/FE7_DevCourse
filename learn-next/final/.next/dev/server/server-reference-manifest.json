@@ -1,0 +1,43 @@
+{
+  "node": {
+    "0032271ae45205c707b18a6f9cab26b676378b9e12": {
+      "workers": {
+        "app/(public)/feed/[id]/page": {
+          "moduleId": "[project]/learn-next/final/.next-internal/server/app/(public)/feed/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/learn-next/final/src/utils/helper/server.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getGeminiProductFeed",
+          "filename": "learn-next/final/src/utils/helper/server.ts"
+        },
+        "app/page": {
+          "moduleId": "[project]/learn-next/final/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/learn-next/final/src/utils/helper/server.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/learn-next/final/src/utils/actions/index.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getGeminiProductFeed",
+          "filename": "learn-next/final/src/utils/helper/server.ts"
+        }
+      },
+      "layer": {
+        "app/(public)/feed/[id]/page": "rsc",
+        "app/page": "rsc"
+      },
+      "filename": "learn-next/final/src/utils/helper/server.ts",
+      "exportedName": "getGeminiProductFeed"
+    },
+    "40bafef8b8e6bae2cf0f32cc59b81445d0dba800c9": {
+      "workers": {
+        "app/page": {
+          "moduleId": "[project]/learn-next/final/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/learn-next/final/src/utils/helper/server.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/learn-next/final/src/utils/actions/index.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getMoreFeedItems",
+          "filename": "learn-next/final/src/utils/actions/index.ts"
+        }
+      },
+      "layer": {
+        "app/page": "action-browser"
+      },
+      "filename": "learn-next/final/src/utils/actions/index.ts",
+      "exportedName": "getMoreFeedItems"
+    }
+  },
+  "edge": {},
+  "encryptionKey": "8MupwDNhTjcPQVU2ekYYRx50vlJ0NVpzRC1CQ++sjqQ="
+}
